@@ -6,6 +6,9 @@
         <h3>{{ offer.destination }}</h3>
         <p class="text-sm">{{ offer.duration }}</p>
       </div>
+      <div v-show="offer.discount" class="card__discount">
+        <p class="text-md">{{ offer.discount }}</p>
+      </div>
     </div>
   </div>
 </template>

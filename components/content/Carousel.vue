@@ -15,25 +15,29 @@ export default {
           destination: 'Menorca',
           duration: '8 dias / 7 noches',
           image:
-            'https://www.hola.com/imagenes/viajes/20190211137137/menorca-en-invierno-baleares/0-646-457/menorca-noche-mahon-t.jpg?filter=w600&filter=ds75',
+            'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
+          discount: '-15%',
+        },
+        {
+          destination: 'Cancun',
+          duration: '8 dias / 7 noches',
+          image:
+            'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/cancun_krwpsw.jpg',
+          discount: '-30%',
+        },
+        {
+          destination: 'Londres',
+          duration: '8 dias / 7 noches',
+          image:
+            'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522468/exercise_1/londres_pbvkav.jpg',
+          discount: '-30%',
         },
         {
           destination: 'Menorca',
           duration: '8 dias / 7 noches',
           image:
-            'https://www.hola.com/imagenes/viajes/20190211137137/menorca-en-invierno-baleares/0-646-457/menorca-noche-mahon-t.jpg?filter=w600&filter=ds75',
-        },
-        {
-          destination: 'Menorca',
-          duration: '8 dias / 7 noches',
-          image:
-            'https://www.hola.com/imagenes/viajes/20190211137137/menorca-en-invierno-baleares/0-646-457/menorca-noche-mahon-t.jpg?filter=w600&filter=ds75',
-        },
-        {
-          destination: 'Menorca',
-          duration: '8 dias / 7 noches',
-          image:
-            'https://www.hola.com/imagenes/viajes/20190211137137/menorca-en-invierno-baleares/0-646-457/menorca-noche-mahon-t.jpg?filter=w600&filter=ds75',
+            'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
+          discount: '-15%',
         },
       ],
     }
