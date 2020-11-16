@@ -23,6 +23,12 @@ export default {
           image:
             'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
           discount: '-15%',
+          options: [
+            { type: 'Fly', data: 'Raynair' },
+            { type: 'Host', data: 'Blue Sea San Anton Hotel & Spa', stars: 3 },
+            { type: 'Renting', data: 'Fiat 500 o similiar' },
+          ],
+          price: 339,
         },
         {
           destination: 'Cancun',
@@ -31,6 +37,12 @@ export default {
             'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/cancun_krwpsw.jpg',
           discount: '-30%',
           special: 'todo incluido',
+          options: [
+            { type: 'Fly', data: 'Regular' },
+            { type: 'Host', data: 'Flamingo Cancun', stars: 4 },
+            { type: 'Transport', data: 'Traslados aeropuerto - hotel' },
+          ],
+          price: 898,
         },
         {
           destination: 'Londres',
@@ -38,6 +50,12 @@ export default {
           image:
             'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522468/exercise_1/londres_pbvkav.jpg',
           discount: '-30%',
+          options: [
+            { type: 'From', data: 'Barcelona' },
+            { type: 'Fly', data: 'Raynair' },
+            { type: 'Renting', data: 'Hotel Lords', stars: 2 },
+          ],
+          price: 150,
         },
         {
           destination: 'Menorca',
@@ -45,6 +63,12 @@ export default {
           image:
             'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
           discount: '-15%',
+          options: [
+            { type: 'Fly', data: 'Raynair' },
+            { type: 'Host', data: 'Blue Sea San Anton Hotel & Spa', stars: 3 },
+            { type: 'Renting', data: 'Fiat 500 o similiar' },
+          ],
+          price: 339,
         },
       ],
     }

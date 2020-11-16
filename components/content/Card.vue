@@ -13,6 +13,20 @@
         <p class="text-md">{{ offer.discount }}</p>
       </div>
     </div>
+    <div class="card__body">
+      <Option
+        v-for="option in offer.options"
+        :key="option.type"
+        :option="option"
+      />
+    </div>
+    <div class="card__footer">
+      <div class="card__footer-price">
+        <p class="text-sm">desde</p>
+        <p>{{ offer.price }} €</p>
+      </div>
+      <nuxt-link to="#">reservar</nuxt-link>
+    </div>
   </div>
 </template>
 
