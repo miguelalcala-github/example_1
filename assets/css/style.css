@@ -429,9 +429,6 @@ li {
 }
 
 @media only screen and (min-width: 1400px) {
-  .carousel__container {
-    width: 70%;
-  }
   .content__container {
     width: 70%;
   }
