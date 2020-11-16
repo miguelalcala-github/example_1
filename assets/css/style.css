@@ -77,6 +77,22 @@ li {
   padding: 12px 7px;
 }
 
+.card__offer span {
+  display: inline-block;
+  background-color: red;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 1px 7px;
+  margin-left: 2px;
+}
+
+.card__offer span::after {
+  content: '';
+  background-color: red;
+  border-radius: 50%;
+}
+
 .carousel__container {
   width: 100%;
   display: flex;
