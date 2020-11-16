@@ -93,12 +93,30 @@ li {
   border-radius: 50%;
 }
 
+.carousel__arrow-right {
+  position: absolute;
+  right: -35px;
+  transform: rotate(-90deg);
+}
+.carousel__arrow-right img {
+  width: 40px;
+}
+.carousel__arrow-left {
+  position: absolute;
+  left: -35px;
+  transform: rotate(90deg);
+}
+.carousel__arrow-left img {
+  width: 40px;
+}
+
 .carousel__container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 12px 0;
+  position: relative;
 }
 
 .carousel__col {

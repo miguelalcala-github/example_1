@@ -1,7 +1,13 @@
 <template>
   <div class="carousel__container">
+    <div class="carousel__arrow-left">
+      <img src="@/assets/svg/selectIcon.svg" alt="prev offers" />
+    </div>
     <div v-for="(card, index) in cards" :key="index" class="carousel__col">
       <Card :offer="card" />
+    </div>
+    <div class="carousel__arrow-right">
+      <img src="@/assets/svg/selectIcon.svg" alt="next offers" />
     </div>
   </div>
 </template>
