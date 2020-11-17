@@ -39,3 +39,32 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.carousel__header {
+  border-bottom: solid #e8e8e8 1px;
+  padding: 0 12px;
+}
+
+.carousel__header li {
+  display: inline-block;
+  padding: 12px;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.carousel__header li.selected {
+  color: black;
+}
+
+.carousel__header li.selected::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+</style>

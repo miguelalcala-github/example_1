@@ -65,3 +65,66 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.content-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid #e8e8e8 1px;
+}
+
+.content-header__container a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.content-header__container .dropdown-content a:hover {
+  background-color: #fff;
+}
+
+.content-header__container .dropdown-content {
+  background-color: #bcc6ce;
+}
+
+.content-header__example {
+  padding-right: 7px;
+}
+
+.content-header__left {
+  display: flex;
+  align-items: center;
+}
+
+.content-header__left > img {
+  width: 36px;
+}
+
+.content-header__offer {
+  margin: 20px 12px;
+}
+
+.content-header__offer h2 {
+  display: block;
+  font-weight: 400;
+}
+.content-header__offer p {
+  display: inline-block;
+  font-weight: 400;
+}
+.content-header__offer .dropdown {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.content-header__right {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+.content-header__right a {
+  text-decoration: none;
+  color: #6495ed;
+}
+</style>

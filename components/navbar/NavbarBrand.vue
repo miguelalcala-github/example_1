@@ -5,3 +5,9 @@
     alt="logitravel logo"
   />
 </template>
+<style scoped>
+.navbar__brand {
+  width: auto;
+  height: 42px;
+}
+</style>

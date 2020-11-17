@@ -51,3 +51,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.navbar__location {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+}
+
+.navbar__location-user {
+  margin-left: 10px;
+}
+</style>

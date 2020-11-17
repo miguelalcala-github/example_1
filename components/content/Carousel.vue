@@ -12,7 +12,7 @@
       v-for="(card, index) in cards"
       :key="index"
       :offer="card"
-      :class="getClass(currentPageIndex, index)"
+      :class="getClass(index, card)"
     />
     <div class="carousel__arrow-right">
       <img
@@ -33,6 +33,7 @@ export default {
     },
   },
   async fetch() {
+    this.currentPageIndex = 0
     this.cards = await this.$content('offers')
       .where({ section: { $contains: this.currentSection } })
       .fetch()
@@ -40,125 +41,9 @@ export default {
   data() {
     return {
       cards: [],
-      // cards2: [
-      //   {
-      //     destination: 'Menorca',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
-      //     discount: '-15%',
-      //     options: [
-      //       { type: 'Fly', data: 'Raynair' },
-      //       { type: 'Host', data: 'Blue Sea San Anton Hotel & Spa', stars: 3 },
-      //       { type: 'Renting', data: 'Fiat 500 o similiar' },
-      //     ],
-      //     price: 339,
-      //     section: ['baleares y canarias', 'mediterraneo', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Cancun',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/cancun_krwpsw.jpg',
-      //     discount: '-30%',
-      //     special: 'todo incluido',
-      //     options: [
-      //       { type: 'Fly', data: 'Regular' },
-      //       { type: 'Host', data: 'Flamingo Cancun', stars: 4 },
-      //       { type: 'Transport', data: 'Traslados aeropuerto - hotel' },
-      //     ],
-      //     price: 898,
-      //     section: ['caribe', 'larga distancia', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Londres',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522468/exercise_1/londres_pbvkav.jpg',
-      //     discount: '-30%',
-      //     options: [
-      //       { type: 'From', data: 'Barcelona' },
-      //       { type: 'Fly', data: 'Raynair' },
-      //       { type: 'Renting', data: 'Hotel Lords', stars: 2 },
-      //     ],
-      //     price: 150,
-      //     section: ['capitales europeas', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Menorca',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
-      //     discount: '-15%',
-      //     options: [
-      //       { type: 'Fly', data: 'Raynair' },
-      //       { type: 'Host', data: 'Blue Sea San Anton Hotel & Spa', stars: 3 },
-      //       { type: 'Renting', data: 'Fiat 500 o similiar' },
-      //     ],
-      //     price: 339,
-      //     section: ['baleares y canarias', 'mediterraneo', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Mallorca',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
-      //     discount: '-15%',
-      //     options: [
-      //       { type: 'Fly', data: 'Raynair' },
-      //       { type: 'Host', data: 'Blue Sea San Anton Hotel & Spa', stars: 3 },
-      //       { type: 'Renting', data: 'Fiat 500 o similiar' },
-      //     ],
-      //     price: 339,
-      //     section: ['baleares y canarias', 'mediterraneo', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Cancun',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/cancun_krwpsw.jpg',
-      //     discount: '-30%',
-      //     special: 'todo incluido',
-      //     options: [
-      //       { type: 'Fly', data: 'Regular' },
-      //       { type: 'Host', data: 'Flamingo Cancun', stars: 4 },
-      //       { type: 'Transport', data: 'Traslados aeropuerto - hotel' },
-      //     ],
-      //     price: 898,
-      //     section: ['caribe', 'larga distancia', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Londres',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522468/exercise_1/londres_pbvkav.jpg',
-      //     discount: '-30%',
-      //     options: [
-      //       { type: 'From', data: 'Barcelona' },
-      //       { type: 'Fly', data: 'Raynair' },
-      //       { type: 'Renting', data: 'Hotel Lords', stars: 2 },
-      //     ],
-      //     price: 150,
-      //     section: ['capitales europeas', 'destacados'],
-      //   },
-      //   {
-      //     destination: 'Mallorca',
-      //     duration: '8 dias / 7 noches',
-      //     image:
-      //       'https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg',
-      //     discount: '-15%',
-      //     options: [
-      //       { type: 'Fly', data: 'Raynair' },
-      //       { type: 'Host', data: 'Blue Sea San Anton Hotel & Spa', stars: 3 },
-      //       { type: 'Renting', data: 'Fiat 500 o similiar' },
-      //     ],
-      //     price: 339,
-      //     section: ['baleares y canarias', 'mediterraneo', 'destacados'],
-      //   },
-      // ],
       currentPageIndex: 0,
+      prevPageIndex: 0,
       cardsPerPage: 4,
-      currentCards: [],
     }
   },
   watch: {
@@ -171,15 +56,16 @@ export default {
   //   },
   // },
   methods: {
-    getClass(pageIndex, index) {
-      const minIndex = this.cardsPerPage * pageIndex
+    getClass(index, card) {
+      const minIndex = this.cardsPerPage * this.currentPageIndex
       const maxIndex = minIndex + this.cardsPerPage
-
-      return { cardShow: !(index >= minIndex && index < maxIndex) }
+      return {
+        cardHide: !(index >= minIndex && index < maxIndex),
+      }
     },
-    goTo(index) {
-      if (index >= 0 && this.cardsPerPage * index < this.cards.length) {
-        this.currentPageIndex = index
+    goTo(pageIndex) {
+      if (pageIndex >= 0 && this.cardsPerPage * pageIndex < this.cards.length) {
+        this.currentPageIndex = pageIndex
       }
     },
     // generateCurrentSectionCards() {
@@ -190,3 +76,31 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.carousel__arrow-right {
+  position: absolute;
+  right: -35px;
+  transform: rotate(-90deg);
+}
+.carousel__arrow-right img {
+  width: 40px;
+}
+.carousel__arrow-left {
+  position: absolute;
+  left: -35px;
+  transform: rotate(90deg);
+}
+.carousel__arrow-left img {
+  width: 40px;
+}
+
+.carousel__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 0;
+  position: relative;
+}
+</style>

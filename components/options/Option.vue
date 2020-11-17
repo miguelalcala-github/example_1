@@ -36,3 +36,21 @@ export default {
   },
 }
 </script>
+<style scoped>
+.card__option {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2px 0;
+}
+
+.card__option > img {
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+}
+
+.card__option-star {
+  width: 10px;
+  height: 10px;
+}
+</style>

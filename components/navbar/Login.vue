@@ -38,3 +38,15 @@ export default {
   },
 }
 </script>
+<style scoped>
+.navbar__login {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+}
+
+.navbar__login-user {
+  margin-left: 10px;
+}
+</style>
