@@ -1,0 +1,27 @@
+{
+    "destination": "Mallorca 1",
+    "duration": "8 dias / 7 noches",
+    "image": "https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/menorca_pbtaru.jpg",
+    "discount": "-15%",
+    "options": [
+        {
+            "type": "Fly",
+            "data": "Raynair"
+        },
+        {
+            "type": "Host",
+            "data": "Blue Sea San Anton Hotel & Spa",
+            "stars": 3
+        },
+        {
+            "type": "Renting",
+            "data": "Fiat 500 o similiar"
+        }
+    ],
+    "price": 339,
+    "section": [
+        "baleares y canarias",
+        "mediterraneo",
+        "destacados"
+    ]
+}

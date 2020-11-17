@@ -1,0 +1,28 @@
+{
+    "destination": "Cancun 2",
+    "duration": "8 dias / 7 noches",
+    "image": "https://res.cloudinary.com/da3z5stec/image/upload/h_720,w_1280/v1605522469/exercise_1/cancun_krwpsw.jpg",
+    "discount": "-30%",
+    "special": "todo incluido",
+    "options": [
+        {
+            "type": "Fly",
+            "data": "Regular"
+        },
+        {
+            "type": "Host",
+            "data": "Flamingo Cancun",
+            "stars": 4
+        },
+        {
+            "type": "Transport",
+            "data": "Traslados aeropuerto - hotel"
+        }
+    ],
+    "price": 898,
+    "section": [
+        "caribe",
+        "larga distancia",
+        "destacados"
+    ]
+}
