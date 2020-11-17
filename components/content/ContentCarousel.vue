@@ -10,7 +10,7 @@
         {{ option }}
       </li>
     </ul>
-    <Carousel />
+    <Carousel :current-section="optionSelected" />
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
         'mediterraneo',
         'larga distancia',
       ],
-      optionSelected: null,
+      optionSelected: 'destacados',
     }
   },
   methods: {

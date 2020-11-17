@@ -34,6 +34,10 @@ li {
   background-color: #164e7f;
 }
 
+.cardShow {
+  display: none;
+}
+
 .card {
   border-radius: 5px;
   overflow: hidden;
